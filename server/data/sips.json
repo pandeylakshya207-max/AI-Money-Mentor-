@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Public Provident Fund (PPF)",
+    "category": "Government",
+    "risk": "Low",
+    "minInvestment": 500,
+    "lockIn": "15 years",
+    "expectedReturn": "7.1%",
+    "description": "Safe, tax-free returns with government backing. Ideal for retirement planning.",
+    "taxBenefits": "Section 80C exempt, Interest exempt, Maturity exempt (EEE)"
+  },
+  {
+    "id": 2,
+    "name": "National Pension System (NPS)",
+    "category": "Government",
+    "risk": "Medium",
+    "minInvestment": 1000,
+    "lockIn": "Until age 60",
+    "expectedReturn": "9-12%",
+    "description": "Retirement-focused hybrid investment with additional tax benefits under Sec 80CCD(1B).",
+    "taxBenefits": "Section 80C + Additional ₹50,000 deduction"
+  },
+  {
+    "id": 3,
+    "name": "SBI Bluechip Fund",
+    "category": "Private",
+    "risk": "Medium",
+    "minInvestment": 500,
+    "lockIn": "None",
+    "expectedReturn": "12-14%",
+    "description": "Invests in high-growth blue-chip companies with a proven track record. Stable long-term returns.",
+    "taxBenefits": "LTCG applies after 1 year"
+  },
+  {
+    "id": 4,
+    "name": "HDFC Top 100 Fund",
+    "category": "Private",
+    "risk": "Medium",
+    "minInvestment": 500,
+    "lockIn": "None",
+    "expectedReturn": "11-13%",
+    "description": "Focused on the top 100 market cap companies in India. Solid core for a portfolio.",
+    "taxBenefits": "LTCG applies after 1 year"
+  },
+  {
+    "id": 5,
+    "name": "Axis Long Term Equity (ELSS)",
+    "category": "Private",
+    "risk": "High",
+    "minInvestment": 500,
+    "lockIn": "3 years",
+    "expectedReturn": "15-18%",
+    "description": "Tax-saving mutual fund with the shortest lock-in period. High-growth potential.",
+    "taxBenefits": "Section 80C deduction up to ₹1.5 Lakhs"
+  },
+  {
+    "id": 6,
+    "name": "ICICI Tech Fund",
+    "category": "Private",
+    "risk": "Very High",
+    "minInvestment": 100,
+    "lockIn": "None",
+    "expectedReturn": "18-22%",
+    "description": "Sectoral fund focusing on Indian IT and Digital giants. High risk, high reward potential.",
+    "taxBenefits": "Short term or Long term capital gains apply"
+  }
+]

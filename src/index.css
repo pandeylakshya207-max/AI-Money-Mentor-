@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --color-primary: var(--color-emerald-600);
+  --color-secondary: var(--color-slate-900);
+  --color-background: var(--color-slate-50);
+  --radius-xl: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-secondary font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl rounded-xl;
+  }
+}
+
+:root {
+  --color-emerald-600: #059669;
+  --color-slate-900: #0f172a;
+  --color-slate-50: #f8fafc;
+}
