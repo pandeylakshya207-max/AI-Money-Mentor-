@@ -15,10 +15,15 @@ const port = 3001;
 
 app.use(express.json());
 
-const genAI = new GoogleGenerativeAI(process.env.VITE_GEMINI_API_KEY || '');
+const apiKey = process.env.VITE_GEMINI_API_KEY;
+if (!apiKey || apiKey === 'your_gemini_api_key_here') {
+  console.error('CRITICAL: Missing VITE_GEMINI_API_KEY. Please provide a real API key in the .env file.');
+}
+
+const genAI = new GoogleGenerativeAI(apiKey || '');
 const model = genAI.getGenerativeModel({ 
   model: "gemini-3-flash-preview",
-  systemInstruction: "You are AI Money Mentor. Use ₹ (INR). Focus on Indian tax laws (Old vs New regimes) and investment vehicles (PPF, NPS, SIPs, ELSS). Be concise, professional, and actionable. Use markers like [INVESTMENT_PLAN] or [TAX_ADVICE] for specialized sections. Greet users by their name if provided."
+  systemInstruction: "You are AI Money Mentor. Use ₹ (INR). Focus on Indian tax laws (Old vs New regimes) and investment vehicles (PPF, NPS, SIPs, ELSS). Be concise, professional, and actionable. Use markers like [INVESTMENT_PLAN] or [TAX_ADVICE] for specialized sections. Greet users by their name if provided. If an error occurs or the prompt is invalid, reply with a helpful financial insight and ask for clarification."
 });
 
 // Load SIP Data
@@ -35,7 +40,15 @@ app.get('/api/sips/:id', (req, res) => {
 });
 
 app.post('/api/chat', async (req, res) => {
-  const { message, userProfile } = req.body;
+    const { message, userProfile } = req.body;
+    
+    if (!message || !userProfile) {
+      return res.status(400).json({ error: 'Missing message or user profile' });
+    }
+
+    if (!apiKey || apiKey === 'your_gemini_api_key_here') {
+      return res.status(500).json({ error: 'Backend AI is not configured. Please add VITE_GEMINI_API_KEY to .env' });
+    }
   
   try {
     const prompt = `Context: User Name: ${userProfile.fullName}, Income: ₹${userProfile.income}. 
@@ -45,10 +58,12 @@ app.post('/api/chat', async (req, res) => {
     const response = await result.response;
     const text = response.text();
     
+    if (!text) throw new Error('Empty AI response');
+    
     res.json({ text });
   } catch (error: any) {
     console.error('AI Error:', error);
-    res.status(500).json({ error: 'Failed to generate AI advice' });
+    res.status(500).json({ error: 'Failed to generate AI advice. ' + (error.message || '') });
   }
 });
 

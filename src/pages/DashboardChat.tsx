@@ -82,6 +82,11 @@ const DashboardChat = () => {
         body: JSON.stringify({ message: input, userProfile: user }),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to communicate with AI');
+      }
+
       const data = await response.json();
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -90,8 +95,15 @@ const DashboardChat = () => {
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, aiMessage]);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Chat error:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: `Error: ${error.message || 'I encountered an issue. Please check if the backend is running and the API key is set.'}`,
+        sender: 'ai',
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
@@ -149,6 +161,8 @@ const DashboardChat = () => {
               "px-5 py-3 rounded-2xl shadow-sm leading-relaxed",
               message.sender === 'user' 
                 ? "bg-slate-900 text-white" 
+                : message.text.startsWith('Error:')
+                ? "bg-red-50 border border-red-100 text-red-700"
                 : isSpecial 
                 ? "bg-white border-2 border-emerald-100 ring-4 ring-emerald-50/50" 
                 : "bg-white border border-slate-100"
