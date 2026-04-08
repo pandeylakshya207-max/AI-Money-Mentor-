@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# 💰 AI Money Mentor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚨 Problem Statement
 
-Currently, two official plugins are available:
+Many people struggle with managing personal finances, making investment decisions, and understanding how to grow their money effectively.
+Lack of financial awareness often leads to poor financial planning and losses.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 💡 Solution
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+AI Money Mentor is an intelligent financial assistant that helps users make better financial decisions by providing insights, suggestions, and guidance based on user inputs.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* React
+* TypeScript
+* Vite
+* (Add any API / AI tool if used)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔍 Key Features
+
+* ✅ Personalized financial guidance
+* ✅ Investment insights and suggestions
+* ✅ User-friendly interface
+* ✅ Fast performance using Vite
+* ✅ Modern UI with React
+
+---
+
+## 🧠 How It Works
+
+* User inputs financial data or goals
+* Application processes input
+* AI/logic provides recommendations
+* Results displayed in an interactive UI
+
+---
+
+## ▶️ How to Run Locally
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repo-link>
+cd AI-Money-Mentor
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+## 📊 Output
+
+* Provides financial suggestions
+* Helps users plan investments
+* Improves financial decision-making
+
+---
+
+## 📁 Project Structure
+
+* `src/` → Main application code
+* `public/` → Static assets
+* `package.json` → Dependencies
+
+---
+
+## 🚀 Future Improvements
+
+* Integrate real-time financial APIs
+* Add AI chatbot for financial queries
+* Portfolio tracking dashboard
+* Mobile app version
+
+---
+
+## 🤝 Contributors
+
+* Lakshya Pandey
+
+---
+
+💰 [AI Money Mentor](https://github.com/pandeylakshya207-max/AI-Money-Mentor)
