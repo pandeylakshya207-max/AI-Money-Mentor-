@@ -77,7 +77,7 @@ npm run dev
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN) &nbsp;
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:pandeylakshya207@gmail.com) &nbsp;
-[![Portfolio](https://img.shields.io/badge/Portfolio-111?style=flat-square&logo=vercel&logoColor=white)](https://YOUR_PORTFOLIO_SITE)
+
 
 ---
 
