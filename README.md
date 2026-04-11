@@ -82,4 +82,4 @@ npm run dev
 ---
 
 <sub>⚡ Always building · Open to opportunities · Let's ship something great together</sub>
-andeylakshya207-max/AI-Money-Mentor)
+pandeylakshya207-max/AI-Money-Mentor)
