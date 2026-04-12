@@ -39,7 +39,7 @@
 
 **Stack:** `React` · `TypeScript` · `Vite` · `OpenAI API` · `REST APIs` · `Vercel`
 
-📂 [View Repository →](https://github.com/YOUR_GITHUB_USERNAME/AI-Money-Mentor) &nbsp;|&nbsp; 🌐 [Live Demo →](https://ai-money-mentor.vercel.app)
+📂 [View Repository →](https://github.com/pandeylakshya207-max/AI-Money-Mentor) &nbsp;|&nbsp; 🌐 [Live Demo →](https://ai-money-mentor.vercel.app)
 
 ---
 
